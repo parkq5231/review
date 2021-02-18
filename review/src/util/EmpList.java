@@ -43,12 +43,12 @@ public class EmpList {
 	}
 	//수정해야됨
 	// 전체 이름만 리턴
-	public String getNameStr() {
+	public void getNameStr() {
 		String names = "";
 		for (Emp emp : list) {
 			names = emp.name;
+			System.out.println(names);
 		}
-		return names;
 	}
 
 	// list 조회

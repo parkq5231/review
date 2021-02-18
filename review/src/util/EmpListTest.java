@@ -11,9 +11,9 @@ public class EmpListTest {
 		// 첫번째 사원 삭제
 		// emplist.delEmp(0);
 		// 사원의 이름만 출력
-		emplist.getNames();
+//		emplist.getNames();
 		// 사원 이름 출력
-		System.out.println(emplist.getNameStr());
+		emplist.getNameStr();
 		// 전체 리스트 출력
 		System.out.println(emplist.getList());
 
