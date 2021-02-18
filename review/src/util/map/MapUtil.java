@@ -1,6 +1,8 @@
 package util.map;
 
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map.Entry;
 import java.util.Set;
 
 import util.Emp;
@@ -39,20 +41,23 @@ public class MapUtil {
 		return map;
 	}
 
-	//전체이름조회
+	// 전체이름조회
 	public void getNames() {
-		for(Integer keys : map.keySet()) {
+		for (Integer keys : map.keySet()) {
 			System.out.println(map.get(keys).name);
 		}
-		
-	}
-	
-	// 전체이름만조회 map.keySet() --> Iterator ->for
-	// 하다 말았음
-	public HashMap<Integer, Emp> getList() {
-		Set<Integer> id = map.keySet();
-		id.iterator();
 
-		return map;
+	}
+
+	// 전체이름만조회 map.keySet() --> Iterator ->for
+	public void getEmpList() {
+		Iterator<Entry<Integer, Emp>> it = map.entrySet().iterator();
+		while (it.hasNext())
+			System.out.println(it.next().getValue().name);
+
+		Set<Integer> keys = map.keySet();
+		for(Integer key : keys) {
+			System.out.println(map.get(key).name);
+		}
 	}
 }

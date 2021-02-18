@@ -18,7 +18,11 @@ public class MapUtilTest {
 		// 2번 사번 삭제
 //		map.delEmp(2);
 		// 전체 사원 이름 출력
+		System.out.println("전체 사원 이름 출력");
 		map.getNames();
+		// 전체 사원 이름 출력 2
+		System.out.println("전체 사원 이름 출력2");
+		map.getEmpList();
 		// 전체출력
 		System.out.println(map.getMap());
 
