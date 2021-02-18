@@ -29,7 +29,9 @@ public class StringUtil {
 	public static String getFilename(String s) {
 		String result = "";
 		// to do
-		
+		int rs = s.lastIndexOf("/");
+		result = s.substring(rs + 1);
+
 		return result;
 	}
 
@@ -43,6 +45,8 @@ public class StringUtil {
 	public static String getPath(String s) {
 		String result = "";
 		// to do
+		int rs = s.lastIndexOf("/");
+		result = s.substring(0, rs);
 		return result;
 	}
 

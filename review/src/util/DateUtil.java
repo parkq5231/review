@@ -2,6 +2,7 @@ package util;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public class DateUtil {
@@ -28,7 +29,7 @@ public class DateUtil {
 	public static String toStr(Date date) {
 		String result = null;
 		// to do
-		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM");
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		result = dateFormat.format(date);
 		return result;
 	}
@@ -46,4 +47,16 @@ public class DateUtil {
 		return result;
 	}
 
+	public static Date addDay(Date date, int idx) {
+		// to do
+//		Date meetDay = new Date();
+//		Calendar c = Calendar.getInstance();
+//		c.setTime(date);
+//		c.add(Calendar.DATE, 100);
+//		meetDay = c.getTime();
+		
+		Date meetDay = new Date();
+		LocalDateTime.from(meetDay.toInstant()).plusDays(100);
+		return meetDay;
+	}
 }
